@@ -43,6 +43,7 @@
             <th>{{task.id}}</th>
             <td>{{task.title}}</td>
             <td>{{task.content}}</td>
+            <td> <a href="{% url 'updateTask' task.id %}">Update</a> </td>
           </tr>
     
       </table>

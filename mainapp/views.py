@@ -32,9 +32,18 @@ def createTask(request):
 
 def updateTask(request, pk):
     
+    task = Task.objects.get(id=pk)
     
-    pass
-
-
+    form = TaskForm(instance=task)
+    
+    if request.method == 'POST':
+        form = TaskForm(request.POST, instance=task)
+        
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    
+    context = {'form' : form}
+    return render(request,'taskForm.html', context = context)
 
 
