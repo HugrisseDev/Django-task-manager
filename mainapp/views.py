@@ -45,5 +45,3 @@ def updateTask(request, pk):
     
     context = {'form' : form}
     return render(request,'taskForm.html', context)
-
-
