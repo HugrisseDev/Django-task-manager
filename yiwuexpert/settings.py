@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # added Apps
-    'django-debug-toolbar',
+    'debug_toolbar',
     'mainapp',
 ]  
 
