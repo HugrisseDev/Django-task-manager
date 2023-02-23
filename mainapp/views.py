@@ -61,6 +61,6 @@ def deleteTask(request, pk):
         task.delete()
         return redirect('home')
     
-    context = {'form': form}
-    return render(request, )
+    context = {'object': task}
+    return render(request, delete.html, context)
     pass
