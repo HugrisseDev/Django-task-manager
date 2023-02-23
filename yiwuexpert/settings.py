@@ -90,6 +90,13 @@ DATABASES = {
     }
 }
 
+# > postgresql DB setting up
+'''
+DATABASES = {
+    'default': 'django.db.backends.postgresql
+}
+'''
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
