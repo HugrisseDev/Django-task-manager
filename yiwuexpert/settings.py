@@ -93,7 +93,14 @@ DATABASES = {
 # > postgresql DB setting up
 '''
 DATABASES = {
-    'default': 'django.db.backends.postgresql
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
+    }
 }
 '''
 
