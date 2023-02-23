@@ -62,5 +62,5 @@ def deleteTask(request, pk):
         return redirect('home')
     
     context = {'object': task}
-    return render(request, delete.html, context)
+    return render(request, 'delete.html', context)
     pass
