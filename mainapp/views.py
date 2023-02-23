@@ -18,6 +18,8 @@ def home(request):
 def about(request):
     return render(request, template_name='about.html')
 
+# -------------- create task view --------------
+
 def createTask(request):
     form = TaskForm()
     
@@ -29,6 +31,8 @@ def createTask(request):
     
     context = {'form' : form}
     return render(request,'taskForm.html', context = context)
+
+# -------------- update task view --------------
 
 def updateTask(request, pk):
     
@@ -45,3 +49,18 @@ def updateTask(request, pk):
     
     context = {'form' : form}
     return render(request,'taskForm.html', context = context)
+
+
+# -------------- delete task view --------------
+
+def deleteTask(request, pk):
+    
+    task = Task.objects.get(id = pk)
+    
+    if request.method == 'POST':
+        task.delete()
+        return redirect('home')
+    
+    context = {'form': form}
+    return render(request, )
+    pass
