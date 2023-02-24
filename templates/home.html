@@ -44,7 +44,13 @@
             <td>{{task.title}}</td>
             <td>{{task.content}}</td>
             <td> <a href="{% url 'updateTask' task.id %}">Update</a> </td>
-            <td> <a href="{% url 'deleteTask' task.id %}">delete</a> </td>
+            <td> <a href="{% url 'deleteTask' task.id %}">
+
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <p>Delete</p>
+              </button>
+      
+            </a> </td>
           </tr>
     
       </table>
