@@ -43,20 +43,28 @@
             <th>{{task.id}}</th>
             <td>{{task.title}}</td>
             <td>{{task.content}}</td>
-            <td> <a href="{% url 'updateTask' task.id %}">Update</a> </td>
+            <td> <a href="{% url 'updateTask' task.id %}">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <p>Update</p>
+            </button>
+            </a> </td>
             <td> <a href="{% url 'deleteTask' task.id %}">
 
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
                   <p>Delete</p>
               </button>
       
-            </a> </td>
+            </a>
+          
+          </td>
+
           </tr>
     
       </table>
 
-      
-  <!-- Modal -->
+    {% endfor %}
+
+    <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -74,11 +82,7 @@
       </div>
     </div>
   </div>
-
-    {% endfor %}
-
-    
-
+  
     <br>
     <p>enjoy your shopping !</p>
 </body>
