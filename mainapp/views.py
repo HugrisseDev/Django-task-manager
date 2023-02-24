@@ -63,4 +63,6 @@ def deleteTask(request, pk):
     
     context = {'object': task}
     return render(request, 'delete.html', context)
-    pass
+    
+
+

@@ -47,13 +47,12 @@
 
     {% csrf_token %}
 
-    
     <br>
 
     <p>{{object}}</p>
     <!-- <input type="submit" value="submit"/> -->
 <!-- Button trigger modal -->
-        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" class="btn btn-outline-danger btn-lg m-6" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <p>Delete</p>
         </button>
        
@@ -61,8 +60,6 @@
     <br>
 
     <!-- <a href="{% url 'home' %}"> Go back !</a> -->
-
-
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
