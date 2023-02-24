@@ -50,6 +50,7 @@
     
     <br>
 
+    <p>{{object}}</p>
     <!-- <input type="submit" value="submit"/> -->
 <!-- Button trigger modal -->
         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -72,7 +73,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p>Do you want to delete this task  " {{object}} "?</p>
+          <p>Do you really want to delete this task  " {{object}} "?</p>
         </div>
         <div class="modal-footer">
           <a href="{% url 'home' %}"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go back</button></a>
