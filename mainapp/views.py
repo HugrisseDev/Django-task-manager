@@ -16,7 +16,7 @@ def home(request):
 
 
 def about(request):
-    return render(request, template_name='about.html')
+    return render(request, template_name='about.html') 
 
 # -------------- create task view --------------
 
