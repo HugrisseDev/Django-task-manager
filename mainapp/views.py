@@ -75,7 +75,7 @@ def register(request):
         form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('taskForm')
+            return HttpResponse("welcomw")
         
     context = {'form' : form}
     return render(request, 'register.html', context = context)
