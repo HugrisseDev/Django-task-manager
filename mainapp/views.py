@@ -68,13 +68,14 @@ def deleteTask(request, pk):
 # -------------- Registration User --------------
 
 def register(request):
+    
     form = CreateUserForm
     
     if request.method == 'POST':
         form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponse("The user have been registered successfully !")
+            return redirect('home')
         
     context = {'form' : form}
-    return render (request, 'register.html', context)
+    return render(request, 'register.html', context = context)
