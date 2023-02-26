@@ -8,5 +8,5 @@ urlpatterns = [
     path("taskform/", views.createTask, name="taskForm"),
     path("update/<str:pk>/", views.updateTask, name="updateTask"),
     path("delete/<str:pk>/", views.deleteTask, name="deleteTask")
-
+    path("register/", views.registerUser, name="register")
 ]
