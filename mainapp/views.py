@@ -75,7 +75,12 @@ def register(request):
         form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponse("welcomw")
+            return HttpResponse("welcome")
         
     context = {'form' : form}
     return render(request, 'register.html', context = context)
+
+# -------------- Registration User --------------
+
+def login(request):
+    pass
