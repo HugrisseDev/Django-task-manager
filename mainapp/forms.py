@@ -13,7 +13,7 @@ class TaskForm(ModelForm):
 
 
 
-class Register(UserCreationForm):
+class CreateUserForm(UserCreationForm):
     
     class Meta:
         model = User
