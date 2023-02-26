@@ -66,3 +66,5 @@ def deleteTask(request, pk):
     
 
 
+def registerUser(request):
+    pass

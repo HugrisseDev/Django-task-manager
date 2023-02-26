@@ -7,6 +7,6 @@ urlpatterns = [
     path('about/',views.about, name='about'),
     path("taskform/", views.createTask, name="taskForm"),
     path("update/<str:pk>/", views.updateTask, name="updateTask"),
-    path("delete/<str:pk>/", views.deleteTask, name="deleteTask")
+    path("delete/<str:pk>/", views.deleteTask, name="deleteTask"),
     path("register/", views.registerUser, name="register")
 ]
