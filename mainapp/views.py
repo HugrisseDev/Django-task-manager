@@ -1,7 +1,10 @@
 from django.shortcuts import render, redirect
 from .models import Task
-from .forms import TaskForm, CreateUserForm
-from django.http import HttpResponse 
+from .forms import TaskForm, CreateUserForm, Loginform
+from django.http import HttpResponse
+from django.contrib.auth.models import auth
+from django.contrib.auth import authenticate, login
+
 
 
 
@@ -80,7 +83,23 @@ def register(request):
     context = {'form' : form}
     return render(request, 'register.html', context = context)
 
-# -------------- Registration User --------------
+# -------------- Login User --------------
 
 def login(request):
-    pass
+    form = Loginform
+    
+    if request.method == 'POST':
+        form = Loginform(request, data=request.POST)
+        
+        if form.is_valid:
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+            
+            user = authenticate(request, username=username, password=password)
+            
+            if user is not None:
+                auth.login(request, user)
+                return HttpResponse('You loged in successfully !')
+            
+    context = {'form': form}
+    return render(request, 'login.html', context = context)
