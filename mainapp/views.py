@@ -78,7 +78,7 @@ def register(request):
         form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponse("welcome")
+            return HttpResponse("welcome" + {CreateUserForm.User})
         
     context = {'form' : form}
     return render(request, 'register.html', context = context)
@@ -91,7 +91,7 @@ def login(request):
     if request.method == 'POST':
         form = Loginform(request, data=request.POST)
         
-        if form.is_valid:
+        if form.is_valid():
             username = request.POST.get('username')
             password = request.POST.get('password')
             
@@ -99,7 +99,7 @@ def login(request):
             
             if user is not None:
                 auth.login(request, user)
-                return HttpResponse('You loged in successfully !')
+                return HttpResponse("You loged in successfully !")
             
     context = {'form': form}
     return render(request, 'login.html', context = context)
