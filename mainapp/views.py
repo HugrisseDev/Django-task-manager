@@ -103,3 +103,8 @@ def login(request):
             
     context = {'form': form}
     return render(request, 'login.html', context = context)
+
+
+def logout(request):
+    
+    return render(request, 'logout.html')
