@@ -29,3 +29,5 @@ class Loginform(AuthenticationForm):
     username = forms.CharField(widget=TextInput())
     password = forms.CharField(widget=PasswordInput())
     
+class logout():
+    pass
