@@ -115,3 +115,14 @@ def logout(request):
 def dashboard(request):
     
     return render(request, 'dashboard.html')
+
+
+
+
+
+
+
+
+
+
+# Views must be secured
