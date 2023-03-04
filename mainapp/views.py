@@ -19,55 +19,6 @@ def home(request):
     
     return render(request, 'home.html', context = context)
 
-@login_required(login_url="/login")
-def about(request):
-    return render(request, template_name='about.html') 
-
-# -------------- create task view --------------
-# @login_required(login_url="/login")
-def createTask(request):
-    form = TaskForm()
-    
-    if request.method == 'POST':
-        form = TaskForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('home')
-    
-    context = {'form' : form}
-    return render(request,'taskForm.html', context = context)
-
-# -------------- update task view --------------
-# @login_required(login_url="/login")
-def updateTask(request, pk):
-    
-    task = Task.objects.get(id=pk)
-    
-    form = TaskForm(instance=task)
-    
-    if request.method == 'POST':
-        form = TaskForm(request.POST, instance=task)
-        
-        if form.is_valid():
-            form.save()
-            return redirect('home')
-    
-    context = {'form' : form}
-    return render(request,'taskForm.html', context = context)
-
-
-# -------------- delete task view --------------
-# @login_required(login_url="/login")
-def deleteTask(request, pk):
-    
-    task = Task.objects.get(id = pk)
-    
-    if request.method == 'POST':
-        task.delete()
-        return redirect('home')
-    
-    context = {'object': task}
-    return render(request, 'delete.html', context)
     
 # -------------- Registration User --------------
 
@@ -100,7 +51,7 @@ def login(request):
             
             if user is not None:
                 auth.login(request, user)
-                return redirect("dashboard")
+                return redirect("home")
             
     context = {'form': form}
     return render(request, 'login.html', context = context)
@@ -115,7 +66,7 @@ def logout(request):
 
 def dashboard(request):
     
-    return render(request, 'dashboard.html')
+    return render(request, 'profile/dashboard.html')
 
 
 

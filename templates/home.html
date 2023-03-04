@@ -13,76 +13,20 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}"
 </head>
 <body>
-    <h1> Django Task Manager !</h1>
-    <hr>
 
-    <h2>Here is my Task list to complete before the end of February </h2>
-
-    <br>
-
-    {% for task in tasks %}
-
-    <div class="container-fluid mx-auto col-8">
+  
+  <div class="container-fluid mx-auto col-8">
     <div class="row">
-    <table class="table table-hover">
 
-      <tbody>
-        <tr class="table-active">
-          {% comment %} <th scope="row " class="me-auto">{{task.id}}</th> {% endcomment %}
-          <td>{{task.title}}</td>
-          <td>{{task.content}}</td> 
-          <td>
-            <a href="{% url 'updateTask' task.id %}">
-                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                      <h5>Update</h5>
-                </button>
-            </a> 
-          </td>
-          <td  class="ms-auto">
-            <a href="{% url 'deleteTask' task.id %}">
-              <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <h5>Delete</h5>
-              </button>
-          </a> 
-          </td>
-        </tr>
-      </tbody>
-    </table>
+      <h1> Django Task Manager !</h1>
+        
+      <h2>Here is my Task list to complete before the end of February </h2>
+
+      <br>
+      <h5>Enjoy your coding :) </h5>
+      
   </div>
 </div>
-    {% comment %} <table class="table table-dark">
-      
-          <tr>
-            <th>{{task.id}}</th>
-            <td>{{task.title}}</td>
-            <td>{{task.content}}</td>
-            <td> <a href="{% url 'updateTask' task.id %}">
-              <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <p>Update</p>
-            </button>
-            </a> </td>
-            <td> <a href="{% url 'deleteTask' task.id %}">
-
-              <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  <p>Delete</p>
-              </button>
-      
-            </a>
-          
-          </td>
-
-          </tr>
-    
-      </table> {% endcomment %}
-
-    {% endfor %}
-  
-    <br>
-    <h5>Enjoy your coding :) </h5>
-
-    <!-- Need some improvements in the home page  -->
-    
-
     <script href="" src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
