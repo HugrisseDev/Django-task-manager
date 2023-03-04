@@ -4,12 +4,13 @@ from .forms import TaskForm, CreateUserForm, Loginform
 from django.http import HttpResponse
 from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 
 
 
 
 # Create your views here.
-
+@login_required(login_url="/login")
 def home(request):
     
     taksList = Task.objects.all()
