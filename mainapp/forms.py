@@ -10,13 +10,6 @@ from django.forms.widgets import PasswordInput, TextInput
 from django import forms
 
 
-class TaskForm(ModelForm):
-    
-    class Meta:  
-        model = Task
-        fields = ("__all__")
-
-
 
 class CreateUserForm(UserCreationForm):
     
