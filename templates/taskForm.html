@@ -1,5 +1,7 @@
 {% include 'base.html' %}
 
+{% load crispy_forms_tags %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,14 +41,17 @@
 <form  method="post" autocomplete="off">
 
     {% csrf_token %}
+<div class="row">
+        <div class="mx-auto col-10 col-md-8 col-lg-3">
+            {{form|crispy}}
+          {% comment %} {{form.first_name|as_crispy_field}} {% endcomment %}
+          <br>
 
-    {{form.as_p}}
-
-    <br>
-     
-    <button type="submit" class="btn btn-success btn-sm"  data-toggle="button" aria-pressed="false" >
-        <p>Update</p>
-    </button>
+            <button type="submit" class="btn col-10 col-md-8 col-lg-12 btn-success btn-sm"  data-toggle="button" aria-pressed="false" >
+                <h4 class=" mx-auto ">Complete</h4>
+            </button>
+        </div>
+    </div>
     
 </form>
 </body>

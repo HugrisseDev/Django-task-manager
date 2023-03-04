@@ -19,12 +19,12 @@ def home(request):
     
     return render(request, 'home.html', context = context)
 
-
+@login_required(login_url="/login")
 def about(request):
     return render(request, template_name='about.html') 
 
 # -------------- create task view --------------
-
+@login_required(login_url="/login")
 def createTask(request):
     form = TaskForm()
     
@@ -38,7 +38,7 @@ def createTask(request):
     return render(request,'taskForm.html', context = context)
 
 # -------------- update task view --------------
-
+@login_required(login_url="/login")
 def updateTask(request, pk):
     
     task = Task.objects.get(id=pk)
@@ -57,7 +57,7 @@ def updateTask(request, pk):
 
 
 # -------------- delete task view --------------
-
+@login_required(login_url="/login")
 def deleteTask(request, pk):
     
     task = Task.objects.get(id = pk)
@@ -100,7 +100,7 @@ def login(request):
             
             if user is not None:
                 auth.login(request, user)
-                return redirect("dashboard")
+                return redirect("home")
             
     context = {'form': form}
     return render(request, 'login.html', context = context)
