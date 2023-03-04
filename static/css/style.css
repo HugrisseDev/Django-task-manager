@@ -1,7 +1,7 @@
 
 body{
     
-    color: black;
+    color: white;
     justify-content: center;
     text-align: center;
 }
@@ -13,7 +13,6 @@ h1, h2{
 }
 
 input[type=submit]{
-    background-color: rgba(39, 39, 185, 0.268);
     color: white;
     border-radius: 20px ;
     border: solid white;
