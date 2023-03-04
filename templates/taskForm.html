@@ -1,5 +1,7 @@
 {% include 'base.html' %}
 
+{% load static %}
+
 {% load crispy_forms_tags %}
 
 <!DOCTYPE html>
@@ -9,7 +11,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>task form</title>
-    <style>
+    <link rel="stylesheet" href="css/style.css">
+    {% comment %} <style>
         body{
             background-color: rgb(19, 29, 59);
             color: aliceblue;
@@ -31,11 +34,11 @@
             border: solid white;
             width: 10%;
         }
-    </style>
+    </style> {% endcomment %}
 </head>
 <body>
 
-<h2> please fill the task form</h2>
+<h2 style="text-align:center;  margin-top: 40px;"> please fill the task form</h2>
 
 
 <form  method="post" autocomplete="off">

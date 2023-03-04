@@ -22,7 +22,35 @@
 
     {% for task in tasks %}
 
-    <table class="table table-dark">
+    <div class="container-fluid mx-auto col-8">
+    <div class="row">
+    <table class="table table-hover">
+
+      <tbody>
+        <tr class="table-active">
+          {% comment %} <th scope="row " class="me-auto">{{task.id}}</th> {% endcomment %}
+          <td>{{task.title}}</td>
+          <td>{{task.content}}</td> 
+          <td>
+            <a href="{% url 'updateTask' task.id %}">
+                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <h5>Update</h5>
+                </button>
+            </a> 
+          </td>
+          <td  class="ms-auto">
+            <a href="{% url 'deleteTask' task.id %}">
+              <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <h5>Delete</h5>
+              </button>
+          </a> 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+    {% comment %} <table class="table table-dark">
       
           <tr>
             <th>{{task.id}}</th>
@@ -45,7 +73,7 @@
 
           </tr>
     
-      </table>
+      </table> {% endcomment %}
 
     {% endfor %}
   

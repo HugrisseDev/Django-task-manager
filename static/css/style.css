@@ -11,3 +11,11 @@ a{
 h1, h2{
     margin-top: 40px;
 }
+
+input[type=submit]{
+    background-color: rgba(39, 39, 185, 0.268);
+    color: white;
+    border-radius: 20px ;
+    border: solid white;
+    width: 10%;
+}
