@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Task
-from .forms import TaskForm, CreateUserForm, Loginform
+
+from .forms import CreateUserForm, Loginform
 from django.http import HttpResponse
 from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate, login
@@ -13,11 +13,9 @@ from django.contrib.auth.decorators import login_required
 @login_required(login_url="/login")
 def home(request):
     
-    taksList = Task.objects.all()
     
-    context = {'tasks' : taksList}
     
-    return render(request, 'home.html', context = context)
+    return render(request, 'home.html')
 
     
 # -------------- Registration User --------------
