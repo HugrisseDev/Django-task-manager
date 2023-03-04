@@ -18,11 +18,17 @@
 <body>
 
     <h2> Login </h2>
-    
+
     <form method="post" autocomplete="off">
 
-    {% csrf_token %} {{form|crispy}}
-
+    {% csrf_token %} 
+    
+    <div class="row">
+        <div class="mx-auto col-10 col-md-8 col-lg-3">
+            {{form|crispy}}
+          {% comment %} {{form.first_name|as_crispy_field}} {% endcomment %}
+        </div>
+    </div>
     {% comment %} {{form.as_p}} {% endcomment %}
 
     <br>
