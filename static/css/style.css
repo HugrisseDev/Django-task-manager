@@ -1,3 +1,13 @@
+
 body{
-    background-color: blueviolet;
+    
+    color: black;
+    justify-content: center;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+h1, h2{
+    margin-top: 40px;
 }

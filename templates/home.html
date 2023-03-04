@@ -29,13 +29,13 @@
             <td>{{task.title}}</td>
             <td>{{task.content}}</td>
             <td> <a href="{% url 'updateTask' task.id %}">
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <p>Update</p>
             </button>
             </a> </td>
             <td> <a href="{% url 'deleteTask' task.id %}">
 
-              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
                   <p>Delete</p>
               </button>
       
