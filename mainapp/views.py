@@ -76,7 +76,7 @@ def createtask(request):
         form = CreateTaskForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('')
+            return redirect('home')
     
     context = {'form' : form}
     return render(request, 'profile/createtask', context=context)
