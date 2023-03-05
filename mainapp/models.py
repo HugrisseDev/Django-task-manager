@@ -9,3 +9,7 @@ class Task(models.Model):
     date_posted = models.TimeField(auto_now=True, null=True)
     
     user = models.ForeignKey(User, max_length=10, on_delete=models.CASCADE, null=True)
+    
+    def __str__(self):
+        
+        return self.title
