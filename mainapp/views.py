@@ -77,8 +77,9 @@ def createtask(request):
     form = CreateTaskForm()
     if request.method == 'POST':
         form = CreateTaskForm(request.POST)
-        if form.is_valid:
+        if form.is_valid():
             form.save()
-            re
+            return redirect('')
     
-    return render(request, 'createtask')
+    context = {'form' : form}
+    return render(request, 'profile/createtask', context=context)
