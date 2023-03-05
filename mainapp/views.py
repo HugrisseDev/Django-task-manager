@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from .forms import CreateUserForm, Loginform
+from .forms import CreateUserForm, Loginform, CreateTaskForm
 from django.http import HttpResponse
 from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate, login
@@ -64,12 +64,21 @@ def logout(request):
     return redirect("home")
 
 # -------------- User Dashboard --------------
-
+@login_required(login_url='login')
 def dashboard(request):
     
     return render(request, 'profile/dashboard.html')
 
 
-
-
-# Views must be secured..
+# -------------- Create Task --------------
+@login_required(login_url='login')
+def createtask(request):
+    
+    form = CreateTaskForm()
+    if request.method == 'POST':
+        form = CreateTaskForm(request.POST)
+        if form.is_valid:
+            form.save()
+            re
+    
+    return render(request, 'createtask')

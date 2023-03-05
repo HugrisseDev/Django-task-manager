@@ -24,7 +24,7 @@ class Loginform(AuthenticationForm):
     password = forms.CharField(widget=PasswordInput())
 
 
-class CreateTask(forms.MdelsForm):
+class CreateTaskForm(forms.ModelForm):
     class Meta:
         model = Task
         field = ['title','content',]
