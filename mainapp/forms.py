@@ -8,6 +8,8 @@ from django.forms.widgets import PasswordInput, TextInput
 
 from django import forms
 
+from .models import Task
+
 
 
 class CreateUserForm(UserCreationForm):
@@ -20,3 +22,10 @@ class CreateUserForm(UserCreationForm):
 class Loginform(AuthenticationForm):
     username = forms.CharField(widget=TextInput())
     password = forms.CharField(widget=PasswordInput())
+
+
+class CreateTask(forms.MdelsForm):
+    class Meta:
+        model = Task
+        field = ['title','content',]
+        exclude = ['user',]
