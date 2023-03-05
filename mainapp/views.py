@@ -55,12 +55,15 @@ def login(request):
     return render(request, 'login.html', context = context)
 
 
+# -------------- Logout User --------------
+
 def logout(request):
     
     auth.logout(request)
     
     return redirect("home")
 
+# -------------- User Dashboard --------------
 
 def dashboard(request):
     
