@@ -13,11 +13,8 @@ from django.contrib.auth.decorators import login_required
 @login_required(login_url="/login")
 def home(request):
     
-    
-    
     return render(request, 'home.html')
 
-    
 # -------------- Registration User --------------
 
 def register(request):
@@ -28,7 +25,7 @@ def register(request):
         form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponse("welcome")
+            return redirect('login')
         
     context = {'form' : form}
     return render(request, 'register.html', context = context)
