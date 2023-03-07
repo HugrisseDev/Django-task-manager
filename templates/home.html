@@ -23,9 +23,7 @@
       <h2>Here is my Task list to Complete in march 2023 </h2>
 
       {% if user.is_authenticated %}
-        {{ user.password }}
-      {% else %}
-        <p>hello </P>
+        {{ Task.title }}
       {% endif %}
 
       <br>
