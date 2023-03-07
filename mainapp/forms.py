@@ -27,5 +27,5 @@ class Loginform(AuthenticationForm):
 class CreateTaskForm(forms.ModelForm):
     class Meta:
         model = Task
-        field = ['title','content',]
+        field = ['title','content','id']
         exclude = ['user',]
