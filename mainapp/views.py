@@ -93,7 +93,7 @@ def viewtask(request):
     
     curr_user = request.user.id
     
-    task = Task.models.alll().filter(user=curr_user)
+    task = Task.objects.alll().filter(user=curr_user)
     
     context = {'task': task}
     return render(request, 'profile/viewtask.html', context = context)
