@@ -15,13 +15,22 @@
 </head>
 <body>
 
-    {% for tsk in task %}
-        {{ tsk.title }}
-        <br> <br>
-        {{ tsk.content }}
-    
-    {% endfor %}
-    
+    <div class="container-fluid mx-auto col-3">
+        <div class="row">
+            
+        
+        {% for tsk in task %}
+
+            <h4>{{ tsk.title }}</h4>
+            <br> <br>
+            <h6>{{ tsk.content }}</h6>
+
+        {% endfor %}
+
+          
+      </div>
+    </div>
+
 </body>
 </html>
 
