@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
+from . models import Task
 
 
 
@@ -60,6 +61,7 @@ def logout(request):
     
     return redirect("home")
 
+
 # -------------- User Dashboard --------------
 @login_required(login_url='login')
 def dashboard(request):
@@ -82,3 +84,16 @@ def createtask(request):
     
     context = {'form' : form}
     return render(request, 'profile/createtask.html', context=context)
+
+
+
+# -------------- View Task --------------
+@login_required(login_url='login')
+def viewtask(request):
+    
+    curr_user = request.user.id
+    
+    task = Task.models.alll().filter(user=curr_user)
+    
+    context = {'task': task}
+    return render(request, 'profile/viewtask.html', context = context)
