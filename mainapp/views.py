@@ -75,7 +75,9 @@ def createtask(request):
     if request.method == 'POST':
         form = CreateTaskForm(request.POST)
         if form.is_valid():
-            form.save()
+            task = form.save(commit=False)
+            task.user = request.user
+            task.save()
             return redirect('home')
     
     context = {'form' : form}
