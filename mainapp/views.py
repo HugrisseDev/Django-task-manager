@@ -123,7 +123,7 @@ def deletetask(request, pk):
     task = Task.objects.get(pk = id)
     if request.method == 'POST':
         task.delete()
-        return redirect('delete')
+        return redirect('viewtask')
     
     return render(request, 'profile/deletetask.html')
     pass
