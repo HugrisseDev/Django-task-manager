@@ -31,7 +31,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">{{ tsk.title }}</h4>
                                     <p class="card-text">{{ tsk.content }}</p>
-                                <a href="{ url 'updatetask'}" class="btn btn-primary">Update</a>
+                                <a href="{% url 'updatetask' tsk.id %}" class="btn btn-primary">Update</a>
                                 <a href="#" class="btn btn-primary">Delete</a>
                             </div>
                         </div>

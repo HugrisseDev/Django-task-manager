@@ -103,10 +103,10 @@ def viewtask(request):
 @login_required(login_url='login')
 def updatetask(request, pk):
     task = Task.objects.get(id = pk)
-    form = task.CreateTaskForm(instance = task)
+    form = CreateTaskForm(instance = task)
     
     if request.method == 'POST':
-        form = CreateTaskForm(request.POST)
+        form = CreateTaskForm(request.POST, instance=task)
         
         if form.is_valid():
             form.save()
@@ -114,4 +114,4 @@ def updatetask(request, pk):
         
     context = {'form':form}
     return render(request, 'profile/updatetask.html', context = context )
-    pass
+    
