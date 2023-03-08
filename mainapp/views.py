@@ -100,6 +100,17 @@ def viewtask(request):
 
 
 # -------------- update Task --------------
-
-def updatetask(request):
+@login_required(login_url='login')
+def updatetask(request, pk):
+    task = Task.objects.get(id = pk)
+    form = task.CreateTaskForm(instance = task)
+    
+    if request.method == 'POST':
+        form = CreateTaskForm(request.POST)
+        
+        if form.is_valid():
+            form.save()
+            return redirect('viewtask')
+    context = {'form':form}
+    return render(request, )
     pass

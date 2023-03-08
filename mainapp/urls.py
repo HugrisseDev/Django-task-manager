@@ -10,4 +10,5 @@ urlpatterns = [
     path("createtask/", views.createtask, name="createtask"),
     path("logout/", views.logout, name="logout"),
     path("viewtask/", views.viewtask, name="viewtask"),
+    path("updatetask/<str:pk>/", views.updatetask, name="updatetask"),
 ]
