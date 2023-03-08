@@ -119,5 +119,11 @@ def updatetask(request, pk):
     
 # -------------- update Task --------------
 @login_required(login_url='login')
-def deletetask(request):
+def deletetask(request, pk):
+    task = Task.objects.get(pk = id)
+    if request.method == 'POST':
+        task.delete()
+        return redirect('delete')
+    
+    return render(request, 'profile/deletetask.html')
     pass
