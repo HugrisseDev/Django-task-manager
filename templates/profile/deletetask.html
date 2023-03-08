@@ -14,27 +14,24 @@
 </head>
 <body>
 
-    <h2> Update the current task </h2>
+    <h2> Delete the current task </h2>
 <form method="post" autocomplete="off">
 
     {% csrf_token %}
     <div class="row">
         <div class="mx-auto col-10 col-md-8 col-lg-3">
-            {{form|crispy}} 
+            {% comment %} {{form|crispy}}  {% endcomment %}
           <br>
 
+
     <button type="submit" class="btn col-10 col-md-8 col-lg-12 btn-success btn-sm"  data-toggle="button" aria-pressed="false" >
-        <h4 class=" mx-auto ">Complete</h4>
+        <h4 class=" mx-auto ">Yes, I Do </h4>
     </button>
         </div>
-    </div
+    </div>
 
 </form>
 
-<br>
-{% comment %} <p> Do you already have an account ?<a href="{% url 'login' %}">please Login</a></p> {% endcomment %}
-
-    
 </body>
 </html>
 
