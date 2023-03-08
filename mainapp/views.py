@@ -115,3 +115,9 @@ def updatetask(request, pk):
     context = {'form':form}
     return render(request, 'profile/updatetask.html', context = context )
     
+    
+    
+# -------------- update Task --------------
+@login_required(login_url='login')
+def deletetask(request):
+    pass
