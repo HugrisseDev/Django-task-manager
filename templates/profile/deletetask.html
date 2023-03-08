@@ -21,12 +21,17 @@
     <div class="row">
         <div class="mx-auto col-10 col-md-8 col-lg-3">
             {% comment %} {{form|crispy}}  {% endcomment %}
-          <br>
+          
+          
+            <br>
 
-
-    <button type="submit" class="btn col-10 col-md-8 col-lg-12 btn-success btn-sm"  data-toggle="button" aria-pressed="false" >
-        <h4 class=" mx-auto ">Yes, I Do </h4>
-    </button>
+          <button type="submit" class="btn col-10 col-md-8 col-lg-12 btn-success btn-sm"  data-toggle="button" aria-pressed="false" >
+            < a href="{% url 'viewtask'%} > <h4 class=" mx-auto ">Go back</h4> </>
+        </button>      
+        <br>
+        <button type="submit" class="btn col-10 col-md-8 col-lg-12 btn-success btn-sm"  data-toggle="button" aria-pressed="false" >
+            <h4 class=" mx-auto ">Yes, I Do </h4>
+        </button>
         </div>
     </div>
 
