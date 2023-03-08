@@ -97,3 +97,9 @@ def viewtask(request):
     
     context = {'task': task}
     return render(request, 'profile/viewtask.html', context = context)
+
+
+# -------------- update Task --------------
+
+def updatetask(request):
+    pass
