@@ -11,4 +11,5 @@ urlpatterns = [
     path("logout/", views.logout, name="logout"),
     path("viewtask/", views.viewtask, name="viewtask"),
     path("updatetask/<str:pk>/", views.updatetask, name="updatetask"),
+    path("deletetask/<str:pk>/", views.deletetask, name="deletetask"),
 ]
