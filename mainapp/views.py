@@ -111,6 +111,7 @@ def updatetask(request, pk):
         if form.is_valid():
             form.save()
             return redirect('viewtask')
+        
     context = {'form':form}
-    return render(request, )
+    return render(request, 'profile/updatetask.html', context = context )
     pass
