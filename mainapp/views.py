@@ -120,7 +120,7 @@ def updatetask(request, pk):
 # -------------- update Task --------------
 @login_required(login_url='login')
 def deletetask(request, pk):
-    task = Task.objects.get(pk = id)
+    task = Task.objects.get(id = pk)
     if request.method == 'POST':
         task.delete()
         return redirect('viewtask')
