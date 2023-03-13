@@ -117,7 +117,7 @@ def updatetask(request, pk):
     
     
     
-# -------------- update Task --------------
+# -------------- update Task --------------_
 @login_required(login_url='login')
 def deletetask(request, pk):
     task = Task.objects.get(id = pk)
