@@ -125,5 +125,5 @@ def deletetask(request, pk):
         task.delete()
         return redirect('viewtask')
     
-    return render(request, 'profile/deletetask.html') 
+    return render(request, 'profile/deletetask.html')   
 
