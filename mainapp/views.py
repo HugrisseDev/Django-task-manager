@@ -140,6 +140,6 @@ def deleteaccount(request):
         user.delete()
         redirect('home')
         
-    return render(request, 'deleteaccount.html')
+    return render(request, 'profile/deleteaccount.html')
         
 

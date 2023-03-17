@@ -1,10 +1,42 @@
 {% extends 'base.html' %}
-
-
-{% static 'css/style.css' %}
+{% load static %}
+{% load crispy_forms_tags  %}
 
 {% block content %}
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
 
+    <h2>Delete Account</h2>
+<form method="post" autocomplete="off">
+
+    {% csrf_token %}
+    <div class="row">
+        <div class="mx-auto col-10 col-md-8 col-lg-3">
+            {% comment %} {{form|crispy}}  {% endcomment %}
+
+          <button type="submit" class="btn col-10 col-md-8 col-lg-12 btn-success btn-sm"  data-toggle="button" aria-pressed="false" >
+            <h4 class=" mx-auto "><a href="{% url 'viewtask'%}">Go bac</h4> 
+        </button>      
+        <br>
+        <br> 
+        <button style="margin-top: 50px;" type="submit" class="btn col-10 col-md-8 col-lg-12 btn-outline-danger btn"  data-toggle="button" aria-pressed="false" >
+            <h4><a style="color:white;" href="{% url 'logout' %}">Yes, I Do</a></h4> 
+        </button>
+        </div>
+    </div>
+
+</form>
+
+</body>
+</html>
 
 {% endblock  %}
