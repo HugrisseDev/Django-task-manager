@@ -127,3 +127,10 @@ def deletetask(request, pk):
     
     return render(request, 'profile/deletetask.html')   
 
+
+# -------------- Delete Account ---------------
+
+@login_required(login_url='login')
+def deleteaccount(request):
+    if request.method == 'POST'
+
