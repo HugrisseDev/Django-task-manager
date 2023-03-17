@@ -118,7 +118,7 @@ def updatetask(request, pk):
     
     
     
-# -------------- update Task -------------- -
+# -------------- Delete Task -------------- -
 @login_required(login_url='login')
 def deletetask(request, pk):
     task = Task.objects.get(id = pk)
@@ -135,8 +135,8 @@ def deletetask(request, pk):
 def deleteaccount(request):
     
     if request.method == 'POST':
-        deleteuser = User.objects.get(username = request.user)
-        deleteuser.delete()
+        deleteUser = User.objects.get(username = request.user)
+        deleteUser.delete()
         redirect('home')
         
     return render(request, 'profile/deleteaccount.html')
