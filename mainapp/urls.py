@@ -12,5 +12,5 @@ urlpatterns = [
     path("viewtask/", views.viewtask, name="viewtask"),
     path("updatetask/<str:pk>/", views.updatetask, name="updatetask"),
     path("deletetask/<str:pk>/", views.deletetask, name="deletetask"),
-    path("deleteaccount/<str:pk>/", views.deleteaccount, name="deleteaccount"),
+    path("deleteaccount", views.deleteaccount, name="deleteaccount"),
 ]

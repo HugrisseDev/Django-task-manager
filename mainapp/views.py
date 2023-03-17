@@ -134,10 +134,9 @@ def deletetask(request, pk):
 @login_required(login_url='login')
 def deleteaccount(request):
     
-    user = User.objects.get(request)
-    
     if request.method == 'POST':
-        user.delete()
+        deleteuser = User.objects.get(username = request.user)
+        deleteuser.delete()
         redirect('home')
         
     return render(request, 'profile/deleteaccount.html')
