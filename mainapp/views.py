@@ -138,7 +138,7 @@ def deleteaccount(request):
     
     if request.method == 'POST':
         user.delete()
-        redire
+        redirect('home')
         
     return render(request, 'deleteaccount.html')
         
