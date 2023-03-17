@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from . models import Task
 
 
@@ -132,5 +133,13 @@ def deletetask(request, pk):
 
 @login_required(login_url='login')
 def deleteaccount(request):
-    if request.method == 'POST'
+    
+    user = User.objects.get(request)
+    
+    if request.method == 'POST':
+        user.delete()
+        redire
+        
+    return render(request, 'deleteaccount.html')
+        
 
