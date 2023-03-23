@@ -57,13 +57,6 @@ def login(request):
 # -------------- Logout User --------------
 
 def logout(request):
-    """
-    It logs out the user and redirects them to the home page
-    
-    :param request: The request object is a Django object that contains metadata about the current
-    request
-    :return: the redirect function.
-    """
     
     auth.logout(request)
     
