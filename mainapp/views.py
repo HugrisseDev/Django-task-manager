@@ -140,5 +140,8 @@ def deleteaccount(request):
         redirect('home')
         
     return render(request, 'profile/deleteaccount.html')
+
+
+
         
 
