@@ -85,7 +85,7 @@ def createtask(request):
             task = form.save(commit=False)
             task.user = request.user
             task.save()
-            return redirect('home')
+            return redirect('viewtask')
     
     context = {'form' : form}
     return render(request, 'profile/createtask.html', context=context)
