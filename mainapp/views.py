@@ -142,5 +142,5 @@ def deleteaccount(request):
     return render(request, 'profile/deleteaccount.html')
 
 
-
+ 
 
