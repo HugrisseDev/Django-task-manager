@@ -28,6 +28,9 @@ def register(request):
         form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
+            
+            messages.success(request, "User registration succeded")
+            
             return redirect('login')
         
     context = {'form' : form}
