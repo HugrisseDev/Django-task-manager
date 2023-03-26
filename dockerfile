@@ -10,6 +10,6 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD gunicorn 
+CMD gunicorn yiwuexpert.wsgi:application --bind 0.0.0.0:8080
 
 EXPOSE 8080
