@@ -21,9 +21,9 @@
 
     {% for message in messages  %}
 
-        {% if message.level = DEFAUL_MESSAGE_LEVELS.SUCCESS %}
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
 
-            { message }
+            {{ message }}
 
         {% endif %}
     
