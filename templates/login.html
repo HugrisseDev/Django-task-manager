@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% load static %}
+
 {% load crispy_forms_tags %}
 
 {% block content %}
@@ -19,7 +20,7 @@
 
     <h2 style="margin:50px;"> Please login :) </h2>
 
-    {% for message in messages  %}
+    {% comment %} {% for message in messages  %}
 
         {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
 
@@ -28,7 +29,7 @@
 
         {% endif %}
     
-    {% endfor %}
+    {% endfor %} {% endcomment %}
 
     <form method="post" autocomplete="off">
 
