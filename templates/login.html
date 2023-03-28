@@ -19,6 +19,16 @@
 
     <h2 style="margin:50px;"> Please login :) </h2>
 
+    {% for message in messages  %}
+
+        {% if message.level = DEFAUL_MESSAGE_LEVELS.SUCCESS %}
+
+            { message }
+
+        {% endif %}
+    
+    {% endfor %}
+
     <form method="post" autocomplete="off">
 
     {% csrf_token %} 
