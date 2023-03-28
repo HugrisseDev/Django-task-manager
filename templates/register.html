@@ -24,12 +24,43 @@
             {{form|crispy}}
           {% comment %} {{form.first_name|as_crispy_field}} {% endcomment %}
           <br>
+          <br>
 
-    <button type="submit" class="btn col-10 col-md-8 col-lg-12 btn-success btn-sm"  data-toggle="button" aria-pressed="false" >
-        <h4 class=" mx-auto ">Register</h4>
-    </button>
+            {% comment %} <button type="submit" class="btn col-10 col-md-8 col-lg-12 btn-success btn-sm"  data-toggle="button" aria-pressed="false" >
+                <h4 class=" mx-auto ">Register</h4>
+            </button> {% endcomment %}
+
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn col-10 col-md-8 col-lg-12 btn-outline-success btn" data-toggle="modal" data-target="#exampleModal">
+                <h4>Register</h4>
+            </button>
+            
+            
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            {% comment %} <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> {% endcomment %}
+                            {% comment %} <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button> {% endcomment %}
+                            </div>
+                            <div class="modal-body">
+                                <h4>your account has been created with success !</h4>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal"><a href="{% url 'home' %}">Great !</a></button>
+                            {% comment %} <button type="button" class="btn btn-primary">Save changes</button> {% endcomment %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
         </div>
-    </div
+    </div>
 
 </form>
 
