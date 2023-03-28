@@ -26,9 +26,38 @@
           <br>
           <br>
 
-              <button type="submit" class="btn col-10 col-md-8 col-lg-12 btn-success btn-sm"  data-toggle="button" aria-pressed="false" >
+            {% comment %} <button type="submit" class="btn col-10 col-md-8 col-lg-12 btn-success btn-sm"  data-toggle="button" aria-pressed="false" >
                 <h4 class=" mx-auto ">Register</h4>
-            </button>  
+            </button>   {% endcomment %}
+
+
+
+                    <!-- Button trigger modal -->
+                    <button type="submit" class="btn col-10 col-md-8 col-lg-12 btn-success btn-sm" data-toggle="modal" data-target="#exampleModal">
+                        <h4 class=" mx-auto ">Register</h4>
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    ...
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+
 
         </div>
     </div>
