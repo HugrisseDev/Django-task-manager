@@ -141,7 +141,7 @@ def deleteaccount(request):
     if request.method == 'POST':
         deleteUser = User.objects.get(username = request.user)
         deleteUser.delete()
-        redirect('home')
+        redirect('login')
         
     return render(request, 'profile/deleteaccount.html')
 
