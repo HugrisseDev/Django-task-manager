@@ -33,7 +33,7 @@
 
                 {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
 
-                    <h4 class=" mx-auto alert alert-success float-center text-center" id="message-timer" > {{ message }} </h4>
+                    <h4 class=" mx-auto alert alert-success "> {{ message }} </h4>
                     <br>
  
                 {% endif %}
@@ -45,9 +45,9 @@
             {{form|crispy}}
 
             <br>
-
+            {% comment %} <i class="fas fa-thumbs-up"></i> &nbsp;  id="message-timer"  float-center text-center {% endcomment %}
                 <button type="submit" class="btn col-10 col-md-8 col-lg-12 btn-success btn-sm" data-toggle="modal" data-target="#exampleModal">
-                    <h4 class=" mx-auto "><i class="fas fa-thumbs-up"></i> &nbsp; Login</h4>
+                    <h4 class=" mx-auto ">Login</h4>
                 </button>
         </div>
     </div>
