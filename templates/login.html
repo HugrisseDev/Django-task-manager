@@ -24,40 +24,43 @@
 
     <form method="post" autocomplete="off">
 
-    {% csrf_token %} 
-    
-    <div class="row">
-        <div class="mx-auto col-10 col-md-8 col-lg-3">
+            {% csrf_token %} 
+            
+            <div class="row">
+                    <div class="mx-auto col-10 col-md-8 col-lg-3">
 
-            {% for message in messages  %}
+                            {% for message in messages  %}
 
-                {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                                {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
 
-                    <h4 id="message-timer"  class=" mx-auto alert alert-success float-center text-center "> {{ message }} </h4>
-                    <br>
- 
-                {% endif %}
-    
-            {% endfor %} 
+                                    <p id="messagee" class="btn col-10 col-md-8 col-lg-12 btn-success btn-sm"> {{ message }} </p>
+                                    <br>
+                
+                                {% endif %}
+                    
+                            {% endfor %} 
 
+                            <br>
+
+                            {{form|crispy}}
+
+                            <br>
+
+                                <button type="submit" class="btn col-10 col-md-8 col-lg-12 btn-success btn-sm" data-toggle="button" data-target="#exampleModal">
+                                    <h4 class=" mx-auto ">Login</h4>
+                                </button>
+
+                    </div>
+            </div>
+
+            
             <br>
-
-            {{form|crispy}}
-
-            <br>
-            {% comment %} <i class="fas fa-thumbs-up"></i> &nbsp;   {% endcomment %}
-                <button type="submit" class="btn col-10 col-md-8 col-lg-12 btn-success btn-sm" data-toggle="modal" data-target="#exampleModal">
-                    <h4 class=" mx-auto ">Login</h4>
-                </button>
-        </div>
-    </div>
-
+            <p>You don't have an account yet ? <a href="{% url 'register' %}">Register first</a></p>
+            <br> 
 </form>
 
-<br>
-<p> You don't have an account yet ? <a href="{% url 'register' %}">Register first</a></p>
-<br>
   
+
 </body>
 </html>
 
