@@ -20,7 +20,7 @@
 
     <h2 style="margin:50px;"> Please login :) </h2>
 
-    {% comment %} {% for message in messages  %}
+    {% for message in messages  %}
 
         {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
 
@@ -29,7 +29,7 @@
 
         {% endif %}
     
-    {% endfor %} {% endcomment %}
+    {% endfor %} 
 
     <form method="post" autocomplete="off">
 
@@ -40,9 +40,9 @@
             {{form|crispy}}
           <br>
 
-            <button type="submit" class="btn col-10 col-md-8 col-lg-12 btn-success btn-sm"  data-toggle="button" aria-pressed="false" >
-                <h4 class=" mx-auto ">Login</h4>
-            </button>
+          <button type="submit" class="btn col-10 col-md-8 col-lg-12 btn-success btn-sm" data-toggle="modal" data-target="#exampleModal">
+            <h4 class=" mx-auto ">Login</h4>
+        </button>
         </div>
     </div>
 
