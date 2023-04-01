@@ -1,9 +1,9 @@
 
-var message_timeout = document.getElementById("messagee");
+// var message_timeout = document.getElementById("messagee");
 
-setTimeout(function() 
-{
+// setTimeout(function() 
+// {
 
-    message_timeout.style.display = "none";
+//     message_timeout.style.display = "none";
 
-}, 500); 
+// }, 500); 
