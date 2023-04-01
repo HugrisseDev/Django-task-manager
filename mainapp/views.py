@@ -103,7 +103,7 @@ def viewtask(request):
     context = {'task': task}
     return render(request, 'profile/viewtask.html', context = context)
 
-
+ 
 # -------------- update Task --------------
 @login_required(login_url='login')
 def updatetask(request, pk):
