@@ -16,6 +16,11 @@ class CreateUserForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']
+        help_texts = {
+            'username': None,
+            'password': None,
+            'password2': None,
+        }
           
         
 class Loginform(AuthenticationForm):

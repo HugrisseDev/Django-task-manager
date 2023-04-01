@@ -1,9 +1,10 @@
 
 body{
     
-    color: rgb(150, 94, 94);
+    color: #fff;
     justify-content: center;
     text-align: center;
+    background-color: black;
 }
 a{
     text-decoration: none;
@@ -17,4 +18,7 @@ input[type=submit]{
     border-radius: 20px ;
     border: solid white;
     width: 10%;
+}
+.helptext{
+    display: none;
 }
