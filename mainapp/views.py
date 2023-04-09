@@ -15,7 +15,7 @@ from django.contrib import messages
 # Create your views here.
 @login_required(login_url="/login")
 def home(request):
-    
+     
     return render(request, 'home.html')
 
 # -------------- Registration User --------------
