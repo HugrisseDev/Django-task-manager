@@ -14,3 +14,4 @@ urlpatterns = [
     path("deletetask/<str:pk>/", views.deletetask, name="deletetask"),
     path("deleteaccount", views.deleteaccount, name="deleteaccount"),
 ]
+
