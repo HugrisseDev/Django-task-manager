@@ -19,7 +19,7 @@ Django==4.1.5
 # django-currentuser==0.4.2
 django-defender==0.9.7
 django-extensions==2.2.5
-django_debug_toolbar==3.8.1
+# django_debug_toolbar==3.8.1
 djangorestframework==3.14.0
 exceptiongroup==1.1.0
 filelock==3.9.0
