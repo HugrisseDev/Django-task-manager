@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     # added Apps
     # 'debug_toolbar',
     'mainapp',
-    # 'crispy_forms',
+    'crispy_forms',
     # 'crispy_bootstrap5',
 ]  
 
