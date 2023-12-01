@@ -31,8 +31,8 @@ def register(request):
             
             messages.success(request, "User registration succeded")
             
-            # return redirect('login')
-            return HttpResponse("user registered!")
+            return redirect('home')
+            # return HttpResponse("user registered!")
         
     context = {'form' : form}
     return render(request, 'register.html', context = context)
@@ -60,7 +60,7 @@ def login(request):
 
  
 # -------------- Logout User --------------
-
+@login_required(login_url='login')
 def logout(request):
     
     auth.logout(request)
