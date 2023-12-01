@@ -1,7 +1,13 @@
-{% extends 'base.html' %} {% load static %} {% load crispy_forms_tags %}
+{% extends 'base.html' %} 
 
-<!DOCTYPE html>
+{% load static %} 
+
+{% load crispy_forms_tags %}
+
+
 {% block content %}
+<!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -18,22 +24,23 @@
 
       <div class="row">
         <div class="mx-auto col-10 col-md-8 col-lg-3">
-          {% for message in messages %} {% if message.level ==
-          DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+          {% for message in messages %} 
+                {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
 
-          <p
-            id="messagee"
-            class="alert col-10 col-md-8 col-lg-12 alert-primary alert-sm"
-          >
-            {{ message }}
-          </p>
+                    <p
+                      id="messagee"
+                      class="alert col-10 col-md-8 col-lg-12 alert-primary alert-sm">
+                      {{ message }}
+                    </p>
+                {% endif %}
+                <br />
+
+          {% endfor %}
+
           <br />
 
-          {% endif %} {% endfor %}
-
-          <br />
-
-          {{form|crispy}}
+          {% comment %} <!-- {{form|crispy}} --> {% endcomment %}
+          {{form.as_p}}
 
           <br />
 
