@@ -68,6 +68,7 @@ def logout(request):
 
 
 # -------------- User Dashboard --------------
+
 @login_required(login_url='login')
 def dashboard(request):
     
@@ -75,6 +76,7 @@ def dashboard(request):
 
 
 # -------------- Create Task --------------
+
 @login_required(login_url='login')
 def createtask(request):
     
@@ -91,8 +93,8 @@ def createtask(request):
     return render(request, 'profile/createtask.html', context=context)
 
 
-
 # -------------- View Task --------------
+
 @login_required(login_url='login')
 def viewtask(request):
     
@@ -104,7 +106,8 @@ def viewtask(request):
     return render(request, 'profile/viewtask.html', context = context)
 
  
-# -------------- update Task --------------
+# -------------- update Task ------------------
+
 @login_required(login_url='login')
 def updatetask(request, pk):
     task = Task.objects.get(id = pk)
@@ -121,8 +124,8 @@ def updatetask(request, pk):
     return render(request, 'profile/updatetask.html', context = context )
     
     
-    
-# -------------- Delete Task -------------- -
+# -------------- Delete Task ------------------
+
 @login_required(login_url='login')
 def deletetask(request, pk):
     task = Task.objects.get(id = pk)
