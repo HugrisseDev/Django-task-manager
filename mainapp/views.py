@@ -31,7 +31,8 @@ def register(request):
             
             messages.success(request, "User registration succeded")
             
-            return redirect('login')
+            # return redirect('login')
+            return HttpResponse("user registered!")
         
     context = {'form' : form}
     return render(request, 'register.html', context = context)
