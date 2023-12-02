@@ -49,19 +49,12 @@
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             {% if user.is_authenticated %}
             <li class="nav-item m-1 btn btn-outline-info btn-sm">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="{% url 'home' %}"
-                >Home</a
-              >
+              <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
             </li>
             {% endif %}
             <li class="nav-item m-1 btn btn-outline-info btn-sm">
               {% if user.is_authenticated %}
-              <a class="nav-link active" href="{% url 'dashboard'%}"
-                >{{ user.username }} | Dashboard</a
-              >
+              <a class="nav-link active" href="{% url 'dashboard'%}">{{ user.username }} | Dashboard</a>
               {% else %} {% if 'login' in request.path %}
               <a class="nav-link active" href="{% url 'register'%}">Register</a>
               {% elif 'register' in request.path %}
